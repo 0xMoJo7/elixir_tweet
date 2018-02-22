@@ -14,7 +14,7 @@ defmodule ElixirTweet.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger, :quantum],
+      extra_applications: [:logger, :quantum, :extwitter],
       mod: {ElixirTweet.Application, []}
     ]
   end
@@ -23,7 +23,9 @@ defmodule ElixirTweet.MixProject do
   defp deps do
     [
       {:quantum, "~> 2.2.3"},
-      {:credo, "~> 0.4.11"}
+      {:credo, "~> 0.4.11"},
+      {:extwitter, "~> 0.7.2"},
+      {:oauth, github: "tim/erlang-oauth"}
     ]
   end
 end
